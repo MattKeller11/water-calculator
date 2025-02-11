@@ -1,6 +1,8 @@
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { InputsCard } from '@/components/custom/InputsCard'
+import { GeneralConsumptionCard } from '@/components/custom/GeneralConsumptionCard'
+import { CalculationTransparencyCard } from '@/components/custom/CalculationTransparencyCard'
 
 export default function Home() {
   return (
@@ -8,7 +10,18 @@ export default function Home() {
       <header>
         <h1 className={cn('text-4xl font-bold')}>Am I Drinking Enough Water?</h1>
       </header>
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
+      <main className="row-start-2 flex flex-col items-center gap-4 sm:items-start">
+        <div className="flex w-full flex-col gap-4 sm:flex-row">
+          <div className="w-full sm:w-2/3">
+            <InputsCard />
+          </div>
+          <div className="w-full sm:w-1/3">
+            <div className="mb-4">
+              <GeneralConsumptionCard />
+            </div>
+            <CalculationTransparencyCard />
+          </div>
+        </div>
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <Button>
             <a
@@ -19,12 +32,6 @@ export default function Home() {
               Deploy now
             </a>
           </Button>
-          <Button>Primary</Button>
-          <Button variant={'secondary'}>Secondary</Button>
-          <Button variant={'destructive'}>Destructive</Button>
-          <Button variant={'ghost'}>Ghost</Button>
-          <Button variant={'outline'}>outline</Button>
-          <Button variant={'link'}>link</Button>
         </div>
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>

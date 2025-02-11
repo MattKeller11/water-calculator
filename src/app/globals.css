@@ -14,8 +14,8 @@ body {
     --card: 230 25% 14%;
     --card-foreground: 230 80% 90%;
 
-    --popover: 230 25% 10%;
-    --popover-foreground: 230 80% 90%;
+    --popover: 220 13% 18%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 230 100% 50%;
     --primary-foreground: 0 0% 100%;
@@ -41,6 +41,10 @@ body {
     --chart-3: 230 70% 70%;
     --chart-4: 230 60% 80%;
     --chart-5: 230 50% 90%;
+  }
+  ::selection {
+    background-color: hsl(var(--secondary)); /* Adjust based on your theme */
+    color: white;
   }
 }
 
