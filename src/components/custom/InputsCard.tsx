@@ -26,6 +26,8 @@ import {
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { useState } from 'react'
+import { calculateWaterIntake } from './helpers'
 
 export const formSchema = z.object({
   weight: z.string().refine(val => !isNaN(Number(val)) && Number(val) > 0, {
@@ -39,6 +41,8 @@ export const formSchema = z.object({
 })
 
 export const InputsCard = () => {
+  const [waterIntake, setWaterIntake] = useState(0)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,6 +57,8 @@ export const InputsCard = () => {
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
     console.log(data)
+    const waterIntakeResult = calculateWaterIntake(data)
+    setWaterIntake(waterIntakeResult)
   }
 
   return (
@@ -166,11 +172,15 @@ export const InputsCard = () => {
             </div>
           </CardContent>
           <CardFooter className="flex justify-between">
-            {/* TODO: Spinner */}
             <Button className="w-full">Calculate</Button>
           </CardFooter>
         </form>
       </Form>
+      {waterIntake > 0 && (
+        <p className="items-center justify-center pb-6 text-center text-2xl">
+          Water Intake: {waterIntake} ounces ({Math.round(waterIntake / 12)} cups)
+        </p>
+      )}
     </Card>
   )
 }
