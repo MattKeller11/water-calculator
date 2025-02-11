@@ -17,7 +17,7 @@ export const GeneralConsumptionCard = () => {
         <CardTitle>Consumption Insights</CardTitle>
       </CardHeader>
       <CardContent>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion collapsible className="w-full" type="single">
           <AccordionItem value="water-consumption">
             <AccordionTrigger className="text-left">How much should you consume?</AccordionTrigger>
             <AccordionContent>
@@ -61,7 +61,7 @@ export const GeneralConsumptionCard = () => {
           </AccordionItem>
           <AccordionItem value="enough-water">
             <AccordionTrigger className="text-left">
-              How do I know if I'm drinking enough?
+              How do I know if I&apos;m drinking enough?
             </AccordionTrigger>
             <AccordionContent>
               <div>

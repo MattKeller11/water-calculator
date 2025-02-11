@@ -11,11 +11,11 @@ export default function Home() {
         <h1 className={cn('text-4xl font-bold')}>Am I Drinking Enough Water?</h1>
       </header>
       <main className="row-start-2 flex flex-col items-center gap-4 sm:items-start">
-        <div className="flex w-full flex-col gap-4 sm:flex-row">
-          <div className="w-full sm:w-2/3">
+        <div className="flex w-full flex-col gap-4 lg:flex-row">
+          <div className="w-full lg:w-2/3">
             <InputsCard />
           </div>
-          <div className="w-full sm:w-1/3">
+          <div className="w-full lg:w-1/3">
             <div className="mb-4">
               <GeneralConsumptionCard />
             </div>
@@ -26,8 +26,8 @@ export default function Home() {
           <Button>
             <a
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
             >
               Deploy now
             </a>

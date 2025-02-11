@@ -9,13 +9,13 @@ export const ReferencesPopover: React.FC = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button size="icon" variant="ghost">
           <InfoIcon />
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        className="w-80 border border-gray-700 bg-popover p-2 text-popover-foreground shadow-md"
         align="center"
+        className="w-80 border border-gray-700 bg-popover p-2 text-popover-foreground shadow-md"
       >
         <ScrollArea className={'[&>[data-radix-scroll-area-viewport]]:max-h-[300px]'}>
           <div className="grid gap-4">
@@ -32,17 +32,17 @@ export const ReferencesPopover: React.FC = () => {
                 <li>
                   Auerbach PS, et al., eds.{' '}
                   <span className="italic">Dehydration and rehydration.</span> In:{' '}
-                  <span className="italic">Auerbach's Wilderness Medicine.</span> 7th ed. Elsevier;
-                  2017.
-                  <a href="https://www.clinicalkey.com" className="text-blue-600 underline">
+                  <span className="italic">Auerbach&apos;s Wilderness Medicine.</span> 7th ed.
+                  Elsevier; 2017.
+                  <a className="text-blue-600 underline" href="https://www.clinicalkey.com">
                     ClinicalKey
                   </a>
                   . Accessed Oct. 9, 2020.
                 </li>
                 <li>
                   <a
-                    href="https://www.cdc.gov/healthywater/drinking/nutrition/index.html"
                     className="text-blue-600 underline"
+                    href="https://www.cdc.gov/healthywater/drinking/nutrition/index.html"
                   >
                     Water & nutrition
                   </a>
@@ -50,8 +50,8 @@ export const ReferencesPopover: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.nationalacademies.org/our-work/dietary-reference-intakes-for-electrolytes-and-water"
                     className="text-blue-600 underline"
+                    href="https://www.nationalacademies.org/our-work/dietary-reference-intakes-for-electrolytes-and-water"
                   >
                     Dietary reference intakes for electrolytes and water
                   </a>
@@ -62,8 +62,8 @@ export const ReferencesPopover: React.FC = () => {
                   Franklin BA.{' '}
                   <span className="italic">Exercise prescription and guidance for adults.</span>
                   <a
-                    href="https://www.uptodate.com/contents/search"
                     className="text-blue-600 underline"
+                    href="https://www.uptodate.com/contents/search"
                   >
                     UpToDate
                   </a>
@@ -71,8 +71,8 @@ export const ReferencesPopover: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://wwwnc.cdc.gov/travel/yellowbook/2020/noninfectious-health-risks/high-altitude-travel-and-altitude-illness"
                     className="text-blue-600 underline"
+                    href="https://wwwnc.cdc.gov/travel/yellowbook/2020/noninfectious-health-risks/high-altitude-travel-and-altitude-illness"
                   >
                     High-altitude travel & altitude illness
                   </a>
@@ -84,7 +84,7 @@ export const ReferencesPopover: React.FC = () => {
                     Pregnant and breastfeeding women: Drinking for two.
                   </span>{' '}
                   Annals of Nutrition & Metabolism. 2017;
-                  <a href="https://doi.org/10.1159/000462998" className="text-blue-600 underline">
+                  <a className="text-blue-600 underline" href="https://doi.org/10.1159/000462998">
                     doi:10.1159/000462998
                   </a>
                   .
@@ -95,8 +95,8 @@ export const ReferencesPopover: React.FC = () => {
                     Maintenance and replacement fluid therapy in adults.
                   </span>
                   <a
-                    href="https://www.uptodate.com/contents/search"
                     className="text-blue-600 underline"
+                    href="https://www.uptodate.com/contents/search"
                   >
                     UpToDate
                   </a>
@@ -106,8 +106,8 @@ export const ReferencesPopover: React.FC = () => {
                   Gordon B. <span className="italic">How much water do you need.</span> Academy of
                   Nutrition and Dietetics.
                   <a
-                    href="https://www.eatright.org/food/nutrition/healthy-eating/how-much-water-do-you-need"
                     className="text-blue-600 underline"
+                    href="https://www.eatright.org/food/nutrition/healthy-eating/how-much-water-do-you-need"
                   >
                     EatRight
                   </a>
@@ -115,8 +115,8 @@ export const ReferencesPopover: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.choosemyplate.gov/ten-tips-make-better-beverage-choices"
                     className="text-blue-600 underline"
+                    href="https://www.choosemyplate.gov/ten-tips-make-better-beverage-choices"
                   >
                     10 tips: Make better beverage choices
                   </a>
@@ -130,8 +130,8 @@ export const ReferencesPopover: React.FC = () => {
                   </span>{' '}
                   Medicine & Science in Sports & Exercise. 2016;
                   <a
-                    href="https://doi.org/10.1016/j.jand.2015.12.006"
                     className="text-blue-600 underline"
+                    href="https://doi.org/10.1016/j.jand.2015.12.006"
                   >
                     doi:10.1016/j.jand.2015.12.006
                   </a>
@@ -143,7 +143,7 @@ export const ReferencesPopover: React.FC = () => {
                     Water intake, water balance, and the elusive daily water requirement.
                   </span>{' '}
                   Nutrients. 2018;
-                  <a href="https://doi.org/10.3390/nu10121928" className="text-blue-600 underline">
+                  <a className="text-blue-600 underline" href="https://doi.org/10.3390/nu10121928">
                     doi:10.3390/nu10121928
                   </a>
                   .
