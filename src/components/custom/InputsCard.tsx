@@ -64,8 +64,7 @@ export const InputsCard = () => {
       <CardHeader>
         <CardTitle>Water Details</CardTitle>
         <CardDescription>
-          Fill in your details to calculate your daily water intake. If unsure, leave the fields
-          blank or enter 0.
+          Fill in your details to calculate your daily water intake.
         </CardDescription>
       </CardHeader>
       <Form {...form}>
