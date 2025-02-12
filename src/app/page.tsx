@@ -1,4 +1,3 @@
-// import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { InputsCard } from '@/components/custom/InputsCard'
 import { GeneralConsumptionCard } from '@/components/custom/GeneralConsumptionCard'
@@ -22,17 +21,6 @@ export default function Home() {
             <CalculationTransparencyCard />
           </div>
         </div>
-        {/* <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <Button>
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Deploy now
-            </a>
-          </Button>
-        </div> */}
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
     </div>
