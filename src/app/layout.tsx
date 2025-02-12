@@ -5,11 +5,17 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import Head from 'next/head'
+import type { Metadata } from 'next'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
   subsets: ['latin'],
 })
+
+export const metadata: Metadata = {
+  title: 'Water Calculator',
+  description: 'Calculate the amount of water you should be drinking a day',
+}
 
 export default function RootLayout({
   children,
@@ -19,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Water Calculator</title>
         {/* Google Ads */}
         <script
           async
