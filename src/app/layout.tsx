@@ -24,6 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta content="ca-pub-9742468069936848" name="google-adsense-account" />
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
+        ></script>
       </head>
       <SpeedInsights />
       {/* Vercel analytics */}
