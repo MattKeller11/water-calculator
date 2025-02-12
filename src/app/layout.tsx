@@ -19,7 +19,6 @@ export default function RootLayout({
       <SpeedInsights />
       {/* Vercel analytics */}
       <Analytics />
-
       {/* Google Analytics */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-CE5KD70FXZ`}
@@ -35,6 +34,12 @@ export default function RootLayout({
         }}
         id="gtag-init"
         strategy="lazyOnload"
+      />
+      {/* Google Ads */}
+      <Script
+        async
+        crossOrigin="anonymous"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
       />
       <body className={`${spaceGrotesk.variable} antialiased`}>{children}</body>
     </html>
