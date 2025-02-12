@@ -4,7 +4,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import type { Metadata } from 'next'
-import { AdSense } from '@/components/custom/AdSense'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -25,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta content="ca-pub-9742468069936848" name="google-adsense-account" />
-        <AdSense pid="9742468069936848" />
       </head>
       <SpeedInsights />
       {/* Vercel analytics */}
