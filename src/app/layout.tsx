@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -22,7 +23,8 @@ export default function RootLayout({
         {/* Google Ads */}
         <script
           async
-          crossOrigin="anonymous"
+          // @ts-expect-error - google ads script
+          crossorigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
         />
       </Head>
