@@ -8,43 +8,44 @@ body {
 
 @layer base {
   :root {
-    --background: 230 30% 12%;
-    --foreground: 230 80% 95%;
+    --background: 230 30% 10%; /* Slightly darker background */
+    --foreground: 230 85% 98%; /* Slightly brighter foreground */
 
-    --card: 230 25% 14%;
-    --card-foreground: 230 80% 90%;
+    --card: 230 28% 12%; /* Slightly darker card */
+    --card-foreground: 230 82% 92%; /* Slightly brighter card foreground */
 
-    --popover: 220 13% 18%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 15% 16%; /* Slightly darker popover */
+    --popover-foreground: 0 0% 100%; /* Keep popover foreground bright */
 
-    --primary: 230 100% 50%;
+    --primary: 230 100% 55%; /* Slightly brighter primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 230 40% 20%;
-    --secondary-foreground: 230 80% 85%;
+    --secondary: 230 45% 22%; /* Slightly brighter secondary */
+    --secondary-foreground: 230 85% 90%; /* Slightly brighter secondary foreground */
 
-    --muted: 230 30% 15%;
-    --muted-foreground: 230 50% 60%;
+    --muted: 230 35% 13%; /* Slightly darker muted */
+    --muted-foreground: 230 55% 65%; /* Slightly brighter muted foreground */
 
-    --accent: 230 50% 25%;
-    --accent-foreground: 230 80% 90%;
+    --accent: 230 55% 28%; /* Slightly brighter accent */
+    --accent-foreground: 230 85% 92%; /* Slightly brighter accent foreground */
 
-    --destructive: 0 80% 50%;
-    --destructive-foreground: 0 100% 95%;
+    --destructive: 0 85% 55%; /* Slightly brighter destructive */
+    --destructive-foreground: 0 100% 98%; /* Slightly brighter destructive foreground */
 
-    --border: 230 40% 15%;
-    --input: 230 30% 15%;
-    --ring: 230 100% 50%;
+    --border: 230 45% 13%; /* Slightly darker border */
+    --input: 230 35% 13%; /* Slightly darker input */
+    --ring: 230 100% 55%; /* Slightly brighter ring */
 
-    --chart-1: 230 90% 50%;
-    --chart-2: 230 80% 60%;
-    --chart-3: 230 70% 70%;
-    --chart-4: 230 60% 80%;
-    --chart-5: 230 50% 90%;
+    --chart-1: 230 95% 55%; /* Slightly brighter chart colors */
+    --chart-2: 230 85% 65%;
+    --chart-3: 230 75% 75%;
+    --chart-4: 230 65% 85%;
+    --chart-5: 230 55% 95%;
   }
+
   ::selection {
     background-color: hsl(var(--secondary)); /* Adjust based on your theme */
-    color: white;
+    color: hsl(var(--secondary-foreground)); /* Use secondary foreground for selection text */
   }
 }
 

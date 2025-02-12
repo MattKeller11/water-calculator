@@ -4,7 +4,6 @@ import { Select } from '../ui/select'
 import { Button } from '../ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { Input } from '../ui/input'
-import { Label } from '../ui/label'
 import {
   SelectContent,
   SelectGroup,
@@ -25,7 +24,6 @@ import {
 } from '@/components/ui/form'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useState } from 'react'
 import { calculateWaterIntake } from './helpers'
 
@@ -107,28 +105,6 @@ export const InputsCard = () => {
                   />
                   <FormField
                     control={form.control}
-                    name="activityLocation"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Activity Location</FormLabel>
-                        <FormControl>
-                          <RadioGroup onValueChange={field.onChange} value={field.value}>
-                            <div className="flex space-x-4">
-                              <RadioGroupItem id="indoor" value="indoor" />
-                              <Label htmlFor="indoor">Indoor</Label>
-                              <RadioGroupItem id="outside" value="outside" />
-                              <Label htmlFor="outside">Outside</Label>
-                              <RadioGroupItem id="mix" value="mix" />
-                              <Label htmlFor="mix">Mix</Label>
-                            </div>
-                          </RadioGroup>
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
                     name="environment"
                     render={({ field }) => (
                       <FormItem>
@@ -177,9 +153,22 @@ export const InputsCard = () => {
         </form>
       </Form>
       {waterIntake > 0 && (
-        <p className="items-center justify-center pb-6 text-center text-2xl">
-          Water Intake: {waterIntake} ounces ({Math.round(waterIntake / 12)} cups)
-        </p>
+        <div>
+          <p className="items-center justify-center pb-3 text-center text-2xl">
+            At least: {waterIntake} ounces ({(waterIntake / 12).toFixed(1)} cups)
+          </p>
+          <div className="pb-4 pl-6 text-left">
+            <p>Modern studies show a guideline closer to:</p>
+            <ul className="list-inside list-disc text-left">
+              <li>
+                <span className="font-bold">Men:</span> 15.5 cups (186 oz)
+              </li>
+              <li>
+                <span className="font-bold">Women:</span> 11.5 cups (138 oz)
+              </li>
+            </ul>
+          </div>
+        </div>
       )}
     </Card>
   )

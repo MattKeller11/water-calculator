@@ -43,15 +43,18 @@ export const GeneralConsumptionCard = () => {
                   <span className="font-bold">Exercise: </span>If you sweat during activity, drink
                   extra water before, during, and after to stay hydrated.
                 </li>
+                <br />
                 <li>
                   <span className="font-bold">Environment: </span>Hot, humid weather increases
                   sweating, while high altitudes can cause dehydration, both requiring extra fluids.
                 </li>
+                <br />
                 <li>
                   <span className="font-bold">Overall Health: </span>Fever, vomiting, and diarrhea
                   cause fluid loss—drink more water or use oral rehydration as advised. Conditions
                   like bladder infections and kidney stones may also require extra fluids.
                 </li>
+                <br />
                 <li>
                   <span className="font-bold">Pregnancy and breast-feeding: </span>Pregnant or
                   breastfeeding? You may need extra fluids to stay hydrated.
