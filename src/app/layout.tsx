@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unknown-property */
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
-import Head from 'next/head'
 import type { Metadata } from 'next'
+import { AdSense } from '@/components/custom/AdSense'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -24,15 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Google Ads */}
-        <script
-          async
-          // @ts-expect-error - google ads script
-          crossorigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
-        />
-      </Head>
+      <head>
+        <AdSense pid="9742468069936848" />
+      </head>
       <SpeedInsights />
       {/* Vercel analytics */}
       <Analytics />
