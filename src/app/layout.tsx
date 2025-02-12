@@ -19,6 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>Water Calculator</title>
+        {/* Google Ads */}
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
+        />
       </Head>
       <SpeedInsights />
       {/* Vercel analytics */}
@@ -39,12 +45,7 @@ export default function RootLayout({
         id="gtag-init"
         strategy="lazyOnload"
       />
-      {/* Google Ads */}
-      <Script
-        async
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742468069936848"
-      />
+
       <body className={`${spaceGrotesk.variable} antialiased`}>{children}</body>
     </html>
   )
