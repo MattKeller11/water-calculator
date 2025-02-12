@@ -158,7 +158,7 @@ export const InputsCard = () => {
             At least: {waterIntake} ounces ({(waterIntake / 12).toFixed(1)} cups)
           </p>
           <div className="pb-4 pl-6 text-left">
-            <p>Modern studies show a guideline closer to:</p>
+            <p>Modern studies suggest a guideline closer to:</p>
             <ul className="list-inside list-disc text-left">
               <li>
                 <span className="font-bold">Men:</span> 15.5 cups (186 oz)
