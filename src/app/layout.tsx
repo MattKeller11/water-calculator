@@ -6,6 +6,8 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/custom/ThemeProvider'
 import { Toaster } from '@/components/ui/toaster'
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+import { AppSidebar } from '@/components/custom/AppSidebar'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -78,14 +80,20 @@ export default function RootLayout({
       />
 
       <body className={`${spaceGrotesk.variable} antialiased`}>
+        <Toaster />
         <ThemeProvider
           disableTransitionOnChange
           enableSystem
           attribute="class"
           defaultTheme="system"
         >
-          {children}
-          <Toaster />
+          <SidebarProvider>
+            <div className="sm:hidden">
+              <AppSidebar />
+              <SidebarTrigger />
+            </div>
+            {children}
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

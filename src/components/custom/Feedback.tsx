@@ -31,7 +31,11 @@ interface FormEvent extends React.FormEvent<HTMLFormElement> {
   target: FeedbackForm
 }
 
-export const Feedback = () => {
+interface FeedbackProps {
+  isRenderedFromSidebar?: boolean
+}
+
+export const Feedback = ({ isRenderedFromSidebar }: FeedbackProps) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const { toast } = useToast()
@@ -65,7 +69,11 @@ export const Feedback = () => {
     <>
       <Dialog onOpenChange={setIsDialogOpen} open={isDialogOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">Feedback</Button>
+          {isRenderedFromSidebar ? (
+            <span>Feedback</span>
+          ) : (
+            <Button variant="outline">Feedback</Button>
+          )}
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
