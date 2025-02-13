@@ -12,9 +12,12 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Water Calculator',
-  description:
-    'Calculate the amount of water you should be drinking a day. Given your weight, height, age, and activity level, we can estimate how much water you should be drinking.',
+  metadataBase: new URL('https://www.dailywaterintake.org'),
+  title: {
+    default: 'Water Calculator',
+    template: '%s | Water Calculator',
+  },
+  description: 'Calculate the amount of water you should be drinking a day.',
   keywords: [
     'daily',
     'water',
@@ -25,6 +28,17 @@ export const metadata: Metadata = {
     'drinking',
     'enough',
   ],
+  openGraph: {
+    title: 'Water Calculator',
+    description: 'Calculate the amount of water you should be drinking a day.',
+    url: 'https://www.dailywaterintake.org',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Water Calculator',
+    description: 'Calculate the amount of water you should be drinking a day.',
+  },
 }
 
 export default function RootLayout({
