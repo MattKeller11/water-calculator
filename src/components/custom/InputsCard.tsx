@@ -62,9 +62,9 @@ export const InputsCard = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Water Details</CardTitle>
+        <CardTitle>Water Calculator</CardTitle>
         <CardDescription>
-          Fill in your details to calculate your daily water intake.
+          Fill in the details below to get your recommended daily water intake.
         </CardDescription>
       </CardHeader>
       <Form {...form}>

@@ -13,7 +13,18 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'Water Calculator',
-  description: 'Calculate the amount of water you should be drinking a day',
+  description:
+    'Calculate the amount of water you should be drinking a day. Given your weight, height, age, and activity level, we can estimate how much water you should be drinking.',
+  keywords: [
+    'daily',
+    'water',
+    'intake',
+    'calculator',
+    'consumption',
+    'recommendations',
+    'drinking',
+    'enough',
+  ],
 }
 
 export default function RootLayout({
