@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/custom/ThemeProvider'
+import { Toaster } from '@/components/ui/toaster'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -84,6 +85,7 @@ export default function RootLayout({
           defaultTheme="system"
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

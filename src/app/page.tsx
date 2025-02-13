@@ -3,12 +3,15 @@ import { InputsCard } from '@/components/custom/InputsCard'
 import { GeneralConsumptionCard } from '@/components/custom/GeneralConsumptionCard'
 import { CalculationTransparencyCard } from '@/components/custom/CalculationTransparencyCard'
 import { ModeToggle } from '@/components/custom/ModeToggle'
+import { Feedback } from '@/components/custom/Feedback'
 
 export default function Home() {
   return (
     <>
-      <div className="fixed right-4 top-4 hidden sm:block">
+      <div className="fixed right-4 top-4 hidden sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-4">
         <ModeToggle />
+        {/* TODO: Feedback should show on small screens */}
+        <Feedback />
       </div>
       <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
         <header className="text-center">
