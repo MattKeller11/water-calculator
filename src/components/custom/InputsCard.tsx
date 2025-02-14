@@ -72,8 +72,8 @@ export const InputsCard = () => {
           Fill in the details below to get your recommended daily water intake.
         </CardDescription>
       </CardHeader>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)}>
+      <form onSubmit={form.handleSubmit(handleSubmit)}>
+        <Form {...form}>
           <CardContent>
             <div className="grid grid-cols-1 gap-4">
               <div className="flex flex-col space-y-2">
@@ -154,8 +154,9 @@ export const InputsCard = () => {
           <CardFooter className="flex justify-between">
             <Button className="w-full">Calculate</Button>
           </CardFooter>
-        </form>
-      </Form>
+        </Form>
+      </form>
+
       {waterIntake > 0 && (
         <div>
           <p className="items-center justify-center pb-3 text-center text-2xl">
