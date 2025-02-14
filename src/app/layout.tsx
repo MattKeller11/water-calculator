@@ -1,3 +1,5 @@
+/* eslint-disable prefer-rest-params */
+/* eslint-disable react/no-unescaped-entities */
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -52,6 +54,16 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CE5KD70FXZ"
+          strategy="afterInteractive"
+        ></Script>
+        <Script id="gtag-init" strategy="lazyOnload">
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {window.dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
+          'G-CE5KD70FXZ');
+        </Script>
         <meta content="ca-pub-9742468069936848" name="google-adsense-account" />
         <script
           async
@@ -62,23 +74,6 @@ export default function RootLayout({
       <SpeedInsights />
       {/* Vercel analytics */}
       <Analytics />
-      {/* Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-CE5KD70FXZ`}
-        strategy="afterInteractive"
-      />
-      <Script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CE5KD70FXZ');`,
-        }}
-        id="gtag-init"
-        strategy="lazyOnload"
-      />
-
       <body className={`${spaceGrotesk.variable} antialiased`}>
         <Toaster />
         <ThemeProvider

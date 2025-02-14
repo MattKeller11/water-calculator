@@ -54,9 +54,14 @@ export const InputsCard = () => {
   })
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data)
     const waterIntakeResult = calculateWaterIntake(data)
     setWaterIntake(waterIntakeResult)
+
+    gtag('event', 'click', {
+      event_category: 'Calculate',
+      event_label: 'Water Intake Calculation',
+      value: waterIntakeResult,
+    })
   }
 
   return (
