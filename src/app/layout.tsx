@@ -1,5 +1,3 @@
-/* eslint-disable prefer-rest-params */
-/* eslint-disable react/no-unescaped-entities */
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -46,6 +44,13 @@ export const metadata: Metadata = {
   },
 }
 
+const gtagSnippet = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CE5KD70FXZ');
+`
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,9 +65,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         ></Script>
         <Script id="gtag-init" strategy="lazyOnload">
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {window.dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
-          'G-CE5KD70FXZ');
+          {gtagSnippet}
         </Script>
         <meta content="ca-pub-9742468069936848" name="google-adsense-account" />
         <script
