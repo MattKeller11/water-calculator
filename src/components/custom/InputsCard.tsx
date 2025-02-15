@@ -84,7 +84,13 @@ export const InputsCard = () => {
                     <FormItem>
                       <FormLabel>Weight</FormLabel>
                       <FormControl>
-                        <Input placeholder="lbs" type="number" {...field} />
+                        <Input
+                          inputMode="numeric"
+                          pattern="[0-9]*"
+                          placeholder="lbs"
+                          type="tel"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -101,7 +107,13 @@ export const InputsCard = () => {
                       <FormItem>
                         <FormLabel>Activity Minutes Per Day</FormLabel>
                         <FormControl>
-                          <Input placeholder="minutes" type="number" {...field} />
+                          <Input
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            placeholder="minutes"
+                            type="tel"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -140,7 +152,13 @@ export const InputsCard = () => {
                       <FormItem>
                         <FormLabel>Age</FormLabel>
                         <FormControl>
-                          <Input placeholder="years" type="number" {...field} />
+                          <Input
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            placeholder="years"
+                            type="tel"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
