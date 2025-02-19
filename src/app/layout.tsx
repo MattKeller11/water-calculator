@@ -67,6 +67,10 @@ export default function RootLayout({
         <Script id="gtag-init" strategy="lazyOnload">
           {gtagSnippet}
         </Script>
+        <meta
+          content="isMrBWa4Gp5rquwtTEpHKH3ZAqKOF_Oz6UEJOs0gAGQ"
+          name="google-site-verification"
+        />
         <meta content="ca-pub-9742468069936848" name="google-adsense-account" />
         <script
           async
